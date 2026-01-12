@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+	<!-- Page JSP par défaut (accueil) -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<page-encoding>UTF-8</page-encoding>
+		</jsp-property-group>
+	</jsp-config>
+
+	<context-param>
+		<param-name>PROD_PLAT_UPLOAD_ROOT_DIR</param-name>
+		<param-value>/home/administrator/uploads/plats</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>PROD_CATEGORIE_UPLOAD_ROOT_DIR</param-name>
+		<param-value>/home/administrator/uploads/categories</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>DEFAULT_UPLOAD_DIR</param-name>
+		<param-value>/home/administrator/uploads/default</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>PROD_PRODUIT_UPLOAD_ROOT_DIR</param-name>
+		<param-value>/home/administrator/uploads/produits</param-value>
+	</context-param>
+	<context-param>
+		<param-name>PROD_CHAMBRE_UPLOAD_ROOT_DIR</param-name>
+		<param-value>/home/administrator/uploads/chambres</param-value>
+	</context-param>
+	<context-param>
+		<param-name>UPLOAD_EVENEMENT_IMAGE_DIR</param-name>
+		<param-value>/home/administrator/uploads/evenements</param-value>
+	</context-param>
+	<context-param>
+    <param-name>UPLOAD_PROMO_IMAGES_DIR</param-name>
+    <param-value>/home/administrator/uploads/promos/images</param-value>
+</context-param>
+
+<context-param>
+    <param-name>UPLOAD_PROMO_VIDEOS_DIR</param-name>
+    <param-value>/home/administrator/uploads/promos/videos</param-value>
+</context-param>
+
+<context-param>
+    <param-name>UPLOAD_ROOT_DIR</param-name>
+    <param-value>/home/administrator/uploads</param-value>
+</context-param>
+	<listener>
+    <listener-class>com.spot69.listener.AppContextListener</listener-class>
+</listener>
+	
+	
+
+	<!-- <servlet> <servlet-name>UtilisateurServlet</servlet-name> <servlet-class>com.spot69.controller.UtilisateurServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>UtilisateurServlet</servlet-name> 
+		<url-pattern>/UtilisateurServlet</url-pattern> </servlet-mapping> -->
+
+
+</web-app>

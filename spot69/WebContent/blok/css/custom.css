@@ -1,0 +1,40 @@
+ .modal-body {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  
+/*   TOAST */
+  .custom-toast {
+        background-color: var(--gray);
+        color: var(--light);
+        border-left: 4px solid var(--gold);
+        min-width: 300px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .custom-toast .toast-header {
+        background-color: var(--dark);
+        color: var(--gold);
+        border-bottom: 1px solid var(--gray);
+    }
+
+    .custom-toast .toast-body {
+        color: var(--white) !important;
+    }
+
+    .custom-toast .close {
+        color: #daaf5a !important;
+    }
+
+    .toast-container {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 9999;
+    }
+.statut-EN_PREPARATION { color: orange !important; }
+.statut-PRETE          { color: #6b6bff !important; }
+.statut-ANNULE         { color: #ff4a4a !important; }
+.statut-EN_ATTENTE     { color: #b9b7b7 !important; }
+.statut-LIVRE          { color: #6aff6a !important; }
+

@@ -1,0 +1,67 @@
+# === Eclipse ===
+.project
+.classpath
+.settings/
+.loadpath
+.metadata/
+/.metadata/
+/Servers/
+
+# === Compiled class files ===
+*.class
+
+# === Java build directories ===
+/bin/
+/build/
+/target/
+/out/
+
+# === Logs ===
+*.log
+
+# === OS generated files ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# === IDEs and editors ===
+.idea/
+.vscode/
+
+# === Maven / Gradle ===
+/.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+target/
+.gradle/
+build/
+gradle-app.setting
+
+# === Backup files ===
+*~
+*.bak
+*.swp
+*.swo
+
+# === Java libraries ===
+*.jar
+*.war
+*.ear
+
+# === Temporary files ===
+*.tmp
+*.temp
+
+# === Output directories ===
+/dist/
+/classes/
+
+# === Tomcat / server local files ===
+/logs/
+/work/
+/temp/
+
+# === Configuration sensitive ===
+/config/
+/.env

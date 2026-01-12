@@ -1,0 +1,215 @@
+/* Carte principale */
+.card {
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-body {
+	padding: 25px;
+}
+
+/* Disposition en deux colonnes */
+.permission-container {
+	display: flex;
+	gap: 20px;
+}
+
+.roles-column {
+	flex: 1;
+	max-width: 300px;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.permissions-column {
+	flex: 2;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste des rôles */
+.role-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.role-item {
+	padding: 10px 15px;
+	margin-bottom: 5px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.role-item:hover {
+	background-color: #b08c3e;
+}
+
+.role-item.active {
+	background-color: #b08c3e;
+	color: white;
+}
+
+/* Formulaire */
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-control {
+	height: 45px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	padding: 10px 15px;
+	font-size: 14px;
+}
+
+.form-control:focus {
+	border-color: #4a6cf7;
+	box-shadow: none;
+}
+
+/* Liste des permissions */
+.permission-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.permission-list>li {
+	margin-bottom: 25px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+.permission-list>li:last-child {
+	border-bottom: none;
+}
+
+.permission-list h4 {
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+/* Cases à cocher */
+.input-checkset ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.input-checkset ul li {
+	margin-bottom: 10px;
+}
+
+.inputcheck {
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #fff;
+	user-select: none;
+}
+
+.inputcheck input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: transparent;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.inputcheck input:checked ~ .checkmark {
+	background-color: #B08C3E;
+	border-color: #B08C3E;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.inputcheck input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.inputcheck .checkmark:after {
+	left: 7px;
+	top: 3px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+/* Boutons */
+.btn {
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+
+.btn-primary {
+	background-color: #4a6cf7;
+	border-color: #4a6cf7;
+}
+
+.btn-primary:hover {
+	background-color: #3a5ce4;
+	border-color: #3a5ce4;
+}
+
+.btn-secondary {
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+	background-color: #5a6268;
+	border-color: #545b62;
+}
+
+/* Responsive */
+@media ( max-width : 768px) {
+	.permission-container {
+		flex-direction: column;
+	}
+	.roles-column {
+		max-width: 100%;
+	}
+	.input-checkset ul {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.card-body {
+		padding: 15px;
+	}
+	.page-title h4 {
+		font-size: 20px;
+	}
+}

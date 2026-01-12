@@ -1,0 +1,190 @@
+       .order-container {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        #productList {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 5px;
+    
+    /* Pour les navigateurs modernes (Chrome, Edge, Safari) */
+    scrollbar-width: thin;          /* largeur de la scrollbar */
+    scrollbar-color: #c1c1c1 #f1f1f1; /* couleur du thumb et du track */
+    
+    /* Pour Firefox */
+    scrollbar-width: thin;
+}
+
+/* Style spécifique pour WebKit (Chrome, Safari) */
+#productList::-webkit-scrollbar {
+    width: 6px;                    /* largeur très fine */
+    height: 6px;                   /* pour la scrollbar horizontale (si nécessaire) */
+}
+
+#productList::-webkit-scrollbar-track {
+    background: #f1f1f1;           /* couleur de fond de la piste */
+    border-radius: 3px;
+}
+
+#productList::-webkit-scrollbar-thumb {
+    background: #c1c1c1;           /* couleur de la scrollbar */
+    border-radius: 3px;
+}
+
+#productList::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;           /* couleur au survol */
+}
+ 
+        
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 6px;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+        
+        .product-selected {
+            border-left: 4px solid var(--primary-color);
+            background-color: rgba(52, 152, 219, 0.03);
+        }
+        
+        .product-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .product-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+        
+        .product-description {
+            font-size: 0.85rem;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            margin-top:20px;
+        }
+        
+        .quantity-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+            background-color: #fff;
+            color: var(--	);
+            border: none;
+            transition: all 0.2s;
+        }
+        
+        .quantity-btn:hover {
+            background-color: #e2e6ea;
+        }
+        
+        .quantity-value {
+            margin: 0 12px;
+            min-width: 24px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .form-section {
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .section-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-control, .custom-select {
+            border-radius: 4px;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        
+        .form-control:focus, .custom-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 0.6rem 1.5rem;
+            font-weight: 500;
+            border-radius: 4px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        
+        .total-section {
+            background-color: var(--light-gray);
+            padding: 1.25rem;
+            border-radius: 6px;
+        }
+        
+        .total-label {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        
+        .total-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .search-box {
+            position: relative;
+        }
+        
+        .search-box .form-control {
+            padding-left: 2.5rem;
+        }
+        
+        .search-box .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        
+        .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
