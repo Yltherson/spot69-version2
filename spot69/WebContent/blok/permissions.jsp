@@ -7,8 +7,8 @@
 
 <!DOCTYPE html>
 <jsp:include page="header.jsp" />
-<jsp:include page="topbar.jsp" />
-<jsp:include page="sidebar.jsp" />
+<jsp:include page="topbar2.jsp" />
+<%-- <jsp:include page="sidebar.jsp" /> --%>
 <main role="main" class="main-content">
 	<div class="container-fluid">
 		<div class="page-wrapper">
@@ -267,6 +267,7 @@
 		</div>
 	</div>
 </main>
+<jsp:include page="bottombar.jsp" />
 <jsp:include page="footer.jsp" />
 <script>
     $(document).ready(function() {

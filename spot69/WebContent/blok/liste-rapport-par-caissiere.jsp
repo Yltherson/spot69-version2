@@ -297,10 +297,10 @@
       </div>
     </div>
   </div>
-  <jsp:include page="bottombar.jsp"/>
 </main>
 
-<jsp:include page="footer.jsp"/>
+<jsp:include page="bottombar.jsp" />
+<jsp:include page="footer.jsp" />
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {

@@ -14,8 +14,8 @@ boolean canDeleteComptes = canEditComptes && PermissionChecker.hasPermission(cur
 
 <!DOCTYPE html>
 <jsp:include page="header.jsp" />
-<jsp:include page="topbar.jsp" />
-<jsp:include page="sidebar.jsp" />
+<jsp:include page="topbar2.jsp" />
+<%-- <jsp:include page="sidebar.jsp" /> --%>
 <main role="main" class="main-content">
 	<div class="container-fluid">
 		<div class="row justify-content-center">
@@ -216,6 +216,7 @@ boolean canDeleteComptes = canEditComptes && PermissionChecker.hasPermission(cur
 
 
 </main>
+<jsp:include page="bottombar.jsp" />
 <jsp:include page="footer.jsp" />
 
 <script>

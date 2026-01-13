@@ -551,16 +551,20 @@
             <div class="top-icon" onclick="showPLU()"><i class="fas fa-th"></i> PLU</div>
         </div>
         
-        <div class="sold"><i class="mr-10">124000 HTG</i></div>
-        <div class="brand-logo"><i class="fas fa-fire"></i></div>
-        <div class="sold"><i class="ml-10"></i>1060US</div>
+        <div class="sold"><i class="mr-10">124 000 HTG</i></div>
+        <!-- <div class="brand-logo"><i class="fas fa-fire"></i></div> -->
+        <div class="brand-logo">
+        	<!-- <i class="fas fa-fire"></i> -->
+        	<img alt="" src="./image/logo.jpg" style="width: 100px;">
+        </div>
+        <div class="sold"><i class="ml-10"></i>1 060 US</div>
 <!-- <i class="fas fa-utensils"></i> -->
         <div class="d-flex align-items-center">
             <!-- <div class="top-icon"><i class="fas fa-beer"></i> SEND-BAR</div> -->
             <div class="top-icon mt-4"> SETTINGS</div>
             <div class="top-icon"><i class="fas fa-receipt"></i> CONFIG</div>
             <div class="top-icon">
-                <a class="nav-link" href="RoleServlet?action=lister">
+                <a class="nav-link" href="RoleServlet?action=lister" style="color: white; text-decoration: none;">
                     <i class="fas fa-user-plus"></i>
                     <span class="ml-3 item-text">USERS</span>
                 </a>
@@ -699,54 +703,60 @@
     </div>
 
     <div class="bottom-nav">
-        <div class="user-profile">
-            <!-- Espace réservé pour le profil utilisateur -->
+    <div class="category-scroll" id="bottom-categories">
+        <!-- Favorites -->
+        <div class="cat-btn" onclick="showFavorites()" title="Favorites">
+            <i class="fas fa-star"></i>
+            <span>Favorites</span>
         </div>
-
-        <div class="category-scroll" id="bottom-categories">
-            <div class="cat-btn" onclick="showFavorites()">
-                <i class="fas fa-star"></i>
-                <span>Favorites</span>
-            </div>
+        
+        <!-- BOARD -->
+        <a href="MenuServlet?action=placer-commande" style="color: white; text-decoration: none;" title="Tableau de bord">
             <div class="cat-btn">
-                <i class="fas fa-glass-whiskey"></i>
-                <!-- <a href="ProduitServlet?action=lister" style="color: white; text-decoration: none;">
-                    <span>BOARD</span>
-                </a> -->
-                <a href="MenuServlet?action=placer-commande" style="color: white; text-decoration: none;">
-                    <!-- <i class="fe fe-clipboard fe-16"></i> -->
-                    <span>BOARD</span>
-                </a>
+                <i class="fas fa-columns"></i>
+                <span>BOARD</span>
             </div>
+        </a>
+        
+        <!-- Produits -->
+        <a href="ProduitServlet?action=lister" style="color: white; text-decoration: none;" title="Gestion des produits">
             <div class="cat-btn">
-                <i class="fas fa-glass-whiskey"></i>
-                <a href="ProduitServlet?action=lister" style="color: white; text-decoration: none;">
-                    <span>Produits</span>
-                </a>
+                <i class="fas fa-boxes"></i>
+                <span>Produits</span>
             </div>
+        </a>
+        
+        <!-- Achats -->
+        <a href="FactureServlet?action=lister" style="color: white; text-decoration: none;" title="Historique des achats">
             <div class="cat-btn">
-                <i class="fas fa-truck"></i>
-                <a href="FactureServlet?action=lister" style="color: white; text-decoration: none;">
-                    <span>Achats</span>
-                </a>
+                <i class="fas fa-shopping-cart"></i>
+                <span>Achats</span>
             </div>
+        </a>
+        
+        <!-- Inventaire -->
+        <a href="MouvementStockServlet?action=lister" style="color: white; text-decoration: none;" title="Gestion d'inventaire">
             <div class="cat-btn">
-                <i class="fas fa-box-open"></i>
-                
+                <i class="fas fa-clipboard-list"></i>
+                <span>Inventaire</span>
             </div>
+        </a>
+        
+        <!-- Rapport -->
+        <a href="CommandeServlet?action=caissiere-commandes-cashed" style="color: white; text-decoration: none;" title="Rapports et statistiques">
             <div class="cat-btn">
-                <i class="fas fa-birthday-cake"></i>
-                <a class="" href="CommandeServlet?action=caissiere-commandes-cashed" style="color: white; text-decoration: none;">
-                    <span class="">Rapport</span>
-                </a>
+                <i class="fas fa-chart-bar"></i>
+                <span>Rapport</span>
             </div>
-            <div class="cat-btn bg-teal">
-                <i class="fas fa-percent"></i>
-                <span>Taux</span>
-            </div>
+        </a>
+        
+        <!-- Taux -->
+        <div class="cat-btn bg-teal" title="Taux et pourcentages">
+            <i class="fas fa-percentage"></i>
+            <span>Taux</span>
         </div>
     </div>
-
+</div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     
@@ -808,55 +818,7 @@
                     }
                 },
                 error: function(xhr, status, error) {
-                    console.error('Erreur lors du chargement du menu:', error);
-                    // Données de secours
-/*                     menuData = [
-                        {
-                            "id": 3,
-                            "nom": "Tabac",
-                            "description": "",
-                            "imageUrl": "/spot69/images/default.png",
-                            "categories": [
-                                {
-                                    "id": 64,
-                                    "nom": "Tabac et Dérivés",
-                                    "description": "Tabac et produits dérivés",
-                                    "imageUrl": "/spot69/images/categories/default.png",
-                                    "sousCategories": []
-                                },
-                                {
-                                    "id": 63,
-                                    "nom": "Produits du Tabac",
-                                    "description": "Catégorie des produits du tabac",
-                                    "imageUrl": "/spot69/images/categories/6ba482d7-99e9-4b22-8462-501e9d7e8423.jpg",
-                                    "sousCategories": [
-                                        {
-                                            "id": 64,
-                                            "nom": "Tabac et Dérivés",
-                                            "description": "Tabac et produits dérivés",
-                                            "imageUrl": "/spot69/images/categories/default.png",
-                                            "plats": [
-                                                {
-                                                    "id": 221,
-                                                    "nom": "test",
-                                                    "prix": 123,
-                                                    "qtePoints": 0,
-                                                    "image": "/spot69/images/plats/default.png"
-                                                },
-                                                {
-                                                    "id": 204,
-                                                    "prix": 0,
-                                                    "qtePoints": 5,
-                                                    "image": "/spot69/images/plats/default.png"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ];
- */                    
+                    console.error('Erreur lors du chargement du menu:', error);                    
                     displayRayonsInSidebar();
                     displayRayonContent();
                     $('#state-message').hide();

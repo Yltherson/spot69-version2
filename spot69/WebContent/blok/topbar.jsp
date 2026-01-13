@@ -7,7 +7,138 @@
     String role = (String) session.getAttribute("role");
     Integer userId = (Integer) session.getAttribute("userId");
 %>
-    
+    <style>
+    	/* --- HEADER (TOP BAR) --- */
+.top-bar {
+    background-color: #000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.top-icon {
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.top-icon i {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.brand-logo {
+    color: #ef5350;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.sold {
+    color: #66bb6a;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Styles pour le menu déroulant utilisateur */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatar-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+.dropdown-item {
+    color: #ccc;
+}
+
+.dropdown-item:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* --- BOTTOM NAV --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-top: 1px solid #333;
+    z-index: 1000;
+}
+
+.category-scroll {
+    display: flex;
+    flex: 1;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.cat-btn {
+    min-width: 110px;
+    height: 90px;
+    background-color: #333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.cat-btn i {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.cat-btn span {
+    font-size: 1rem;
+}
+
+.cat-btn.active {
+    background-color: #444;
+    color: #fdd835;
+}
+
+.cat-btn.bg-teal {
+    background-color: #009688;
+}
+
+/* Style pour les liens dans les catégories */
+.cat-btn a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+}
+    </style>
 <!DOCTYPE html>
    <nav class="topnav navbar navbar-light">
         <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">

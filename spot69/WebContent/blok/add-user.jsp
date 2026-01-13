@@ -4,8 +4,8 @@
 
 
 <jsp:include page="header.jsp" />
-<jsp:include page="topbar.jsp" />
-<jsp:include page="sidebar.jsp" />
+<jsp:include page="topbar2.jsp" />
+<%-- <jsp:include page="sidebar.jsp" /> --%>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -98,5 +98,5 @@
     </form>
   </div>
 </main>
-
+<jsp:include page="bottombar.jsp" />
 <jsp:include page="footer.jsp" />

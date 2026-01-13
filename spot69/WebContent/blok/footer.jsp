@@ -100,14 +100,14 @@
 </html>
  --%>
  
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%--  <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <meta charset="UTF-8">
 <!DOCTYPE html>
 
 
 
-    </div> <!-- .wrapper -->
+    </div> <!-- .wrapper --> --%>
     
     <!-- Section Bouton Téléchargement Application (visible dans toutes les pages) -->
     <!-- <footer class="footer mt-auto py-4 bg-light">
@@ -259,6 +259,30 @@
         console.log('Application Android disponible - Lien: https://play.google.com/store/apps/details?id=com.votrehotel.application');
     });
     </script>
+    
+    <script>
+    // Force le défilement
+    document.addEventListener('DOMContentLoaded', function() {
+        // Force le body à avoir un défilement
+        document.body.style.overflow = 'auto';
+        document.body.style.height = 'auto';
+        document.body.style.minHeight = '100vh';
+        
+        // Force le conteneur principal
+        const mainContent = document.querySelector('.main-content');
+        if (mainContent) {
+            mainContent.style.overflow = 'auto';
+            mainContent.style.height = 'auto';
+        }
+        
+        // Force le conteneur de la table
+       /*  const cardBody = document.querySelector('.card-body');
+        if (cardBody) {
+            cardBody.style.overflow = 'auto';
+            cardBody.style.maxHeight = '500px';
+        } */
+    });
+</script>
     
   </body>
 </html>

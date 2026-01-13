@@ -7,8 +7,8 @@
 
 <!DOCTYPE html>
 <jsp:include page="header.jsp" />
-<jsp:include page="topbar.jsp" />
-<jsp:include page="sidebar.jsp" />
+<jsp:include page="topbar2.jsp" />
+<%-- <jsp:include page="sidebar.jsp" /> --%>
 <style>
 .form-control {
 	border: none;
@@ -232,6 +232,7 @@ label {
   </div>
 </main>
 
+<jsp:include page="bottombar.jsp" />
 
 <script>
 //Fonction pour arrondir à l'entier le plus proche

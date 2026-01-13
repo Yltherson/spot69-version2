@@ -10,16 +10,33 @@
             <div class="top-icon" onclick="showPLU()"><i class="fas fa-th"></i> PLU</div>
         </div>
         
-        <div class="sold"><i class="mr-10">124000 HTG</i></div>
-        <div class="brand-logo"><i class="fas fa-fire"></i></div>
-        <div class="sold"><i class="ml-10"></i>1060US</div>
+        <div class="sold"><i class="mr-10">124 000 HTG</i></div>
+        <div class="brand-logo">
+        	<!-- <i class="fas fa-fire"></i> -->
+        	<img alt="" src="./image/logo.jpg" style="width: 100px;">
+        </div>
+        <div class="sold"><i class="ml-10"></i>1 060 US</div>
 <!-- <i class="fas fa-utensils"></i> -->
         <div class="d-flex align-items-center">
             <!-- <div class="top-icon"><i class="fas fa-beer"></i> SEND-BAR</div> -->
             <div class="top-icon mt-4"> SETTINGS</div>
-            <div class="top-icon"><i class="fas fa-receipt"></i> CONFIG</div>
             <div class="top-icon">
+                <a class="nav-link" href="UtilisateurServlet?action=lister" style="color: white; text-decoration: none;">
+                    <!-- <i class="fe fe-users"></i> -->
+                    <i class="fas fa-receipt"></i>
+                    <span class="ml-3 item-text">CONFIG</span>
+                </a>
+            </div>
+            <!-- <div class="top-icon"><i class="fas fa-receipt"></i> CONFIG</div> -->
+            <!-- <div class="top-icon">
                 <a class="nav-link" href="RoleServlet?action=lister">
+                    <i class="fas fa-user-plus"></i>
+                    <span class="ml-3 item-text">USERS</span>
+                </a>
+            </div> -->
+            <div class="top-icon">
+                <a class="nav-link" href="RoleServlet?action=lister" style="color: white; text-decoration: none;">
+                    <!-- <i class="fe fe-users"></i> -->
                     <i class="fas fa-user-plus"></i>
                     <span class="ml-3 item-text">USERS</span>
                 </a>
